@@ -6,13 +6,22 @@ ui <- fluidPage(
   titlePanel("title panel"),
   
   sidebarLayout(
-    sidebarPanel("sidebar panel"),
+    
+    sidebarPanel("MySidebar",
+                 h3("a button"),
+                 actionButton(inputId="my_submitstatus",
+                              label= "Submit"),
+    ),
+                 
     mainPanel(
-      p("Premm Premm Premm", strong("BIG OL PREMM"), "BETWEEN DIFFERENT", em("interest groups"),
-        "other shucking musers."),
-      img(src=wfarm))
+      p("here's some guff about windfarms"),
+      img(src=wfarm),
+    ),
   )
 )
+    
+    
+  
       
       
       
