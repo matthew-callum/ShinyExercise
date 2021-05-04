@@ -7,18 +7,26 @@ ui <- fluidPage(
   
   sidebarLayout(
     
+    mainPanel(
+      p("here's some guff about windfarms"),
+      img(src=wfarm),),
+    
     sidebarPanel("MySidebar",
                  h3("a button"),
                  actionButton(inputId="my_submitstatus",
                               label= "Submit"),
-    ),
                  
-    mainPanel(
-      p("here's some guff about windfarms"),
-      img(src=wfarm),
-    ),
-  )
-)
+                 checkboxGroupInput(inputId = "my_checkgroup", 
+                                    h3("Checkbox group"), 
+                                    choices = list("Woodland" = 1, 
+                                                   "Grassland" = 2, 
+                                                   "Urban" = 3),
+                                    selected = 1),
+                                  ),
+                                )
+                              )  
+         
+
     
     
   
